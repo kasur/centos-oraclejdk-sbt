@@ -1,4 +1,4 @@
-FROM kasured:centos-oraclejdk
+FROM kasured/centos-oraclejdk
 MAINTAINER Evgeny Rusak "kasured@exadel.com"
 
 RUN yum -y update; yum clean all;
