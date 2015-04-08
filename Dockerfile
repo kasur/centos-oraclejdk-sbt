@@ -3,13 +3,13 @@ MAINTAINER Evgeny Rusak "kasured@exadel.com"
 
 ENV SBT_V 0.13.8
 
-RUN yum -y update; yum clean all;
+#installing git
+RUN yum -y update; yum clean all; yum -y install git;
 
 WORKDIR /opt
 
+# Try to install sbt without deps java-devel this is already in the dep image
 RUN curl -O -L http://dl.bintray.com/sbt/rpm/sbt-$SBT_V.rpm 
-
-# Try to install it without deps java-devel this is already in the dep image
 RUN rpm -ivh sbt-$SBT_V.rpm --nodeps
 
 WORKDIR /
