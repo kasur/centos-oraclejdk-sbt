@@ -1,5 +1,5 @@
 FROM kasured/centos-oraclejdk
-MAINTAINER Evgeny Rusak "kasured@exadel.com"
+MAINTAINER Evgeny Rusak "kasured@gmail.com"
 
 ENV SBT_V 0.13.8
 
